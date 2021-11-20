@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDBook" representedClassName="CDBook" syncable="YES">
+        <attribute name="authorName" attributeType="String"/>
+        <attribute name="desription" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID"/>
+        <attribute name="isAssigned" attributeType="Boolean"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="publishers" attributeType="String"/>
+        <relationship name="toBookType" maxCount="1" deletionRule="Nullify" destinationEntity="CDBookType" inverseName="toBook" inverseEntity="CDBookType"/>
+    </entity>
+    <entity name="CDBookType" representedClassName="CDBookType" syncable="YES">
+        <attribute name="about" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="toBook" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDBook" inverseName="toBookType" inverseEntity="CDBook"/>
+    </entity>
+    <elements>
+        <element name="CDBook" positionX="379.26171875" positionY="-140.08984375" width="128" height="148"/>
+        <element name="CDBookType" positionX="-63" positionY="-18" width="128" height="103"/>
+    </elements>
+</model>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="159" id="KGk-i7-Jjw" customClass="BookTypeListCell" customModule="GNIT_Library_System" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="409" height="159"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="409" height="159"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mym-sJ-Bnd">
+                        <rect key="frame" x="12" y="12" width="385" height="147"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab4-8a-8go">
+                                <rect key="frame" x="8" y="8" width="369" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abou Description of book" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPw-CY-hYx">
+                                <rect key="frame" x="8" y="37.5" width="369" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="ab4-8a-8go" firstAttribute="top" secondItem="Mym-sJ-Bnd" secondAttribute="top" constant="8" id="2Sj-AT-0QP"/>
+                            <constraint firstItem="OPw-CY-hYx" firstAttribute="leading" secondItem="Mym-sJ-Bnd" secondAttribute="leading" constant="8" id="8js-As-Zjs"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OPw-CY-hYx" secondAttribute="bottom" priority="700" constant="8" id="ZQx-Ev-rAP"/>
+                            <constraint firstAttribute="trailing" secondItem="OPw-CY-hYx" secondAttribute="trailing" constant="8" id="ifG-nV-QG5"/>
+                            <constraint firstItem="ab4-8a-8go" firstAttribute="leading" secondItem="Mym-sJ-Bnd" secondAttribute="leading" constant="8" id="jfG-AX-df8"/>
+                            <constraint firstItem="OPw-CY-hYx" firstAttribute="top" secondItem="ab4-8a-8go" secondAttribute="bottom" constant="8" id="lgi-4a-Ov3"/>
+                            <constraint firstAttribute="trailing" secondItem="ab4-8a-8go" secondAttribute="trailing" constant="8" id="wIM-IW-0PB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Mym-sJ-Bnd" secondAttribute="bottom" id="EiK-DD-deY"/>
+                    <constraint firstAttribute="trailing" secondItem="Mym-sJ-Bnd" secondAttribute="trailing" constant="12" id="l0f-ZS-LYg"/>
+                    <constraint firstItem="Mym-sJ-Bnd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="lDV-Cu-6wy"/>
+                    <constraint firstItem="Mym-sJ-Bnd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="oES-kk-zZh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelBookDescription" destination="OPw-CY-hYx" id="4Ld-qj-LUl"/>
+                <outlet property="labelBookTypeTitle" destination="ab4-8a-8go" id="aTB-YI-ohK"/>
+                <outlet property="viewBackground" destination="Mym-sJ-Bnd" id="5iv-Us-5FO"/>
+            </connections>
+            <point key="canvasLocation" x="276" y="77"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
