@@ -70,7 +70,6 @@ struct BookTypeDataRepository: BookTypeRepository {
             return nil
         }
         
-        
         result.forEach { eachValue in
         bookTypeResult.append(eachValue.convertToBookType())
         }

@@ -24,13 +24,12 @@ class BookTypeListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        uiSetup()
+        setupUI()
     }
     
-    fileprivate func uiSetup(){
+    fileprivate func setupUI(){
         labelBookTypeTitle.textColor = .white
         labelBookDescription.textColor = .white
-
         viewBackground.layer.cornerRadius = 8
     }
 

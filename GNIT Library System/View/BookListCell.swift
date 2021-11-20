@@ -8,16 +8,30 @@
 import UIKit
 
 class BookListCell: UITableViewCell {
-
+    @IBOutlet weak var labelBookTitle: UILabel!
+    @IBOutlet weak var viewBackground: UIView!
+    @IBOutlet weak var labelBookAuthor: UILabel!
+    
+    var bookInfo: Book?{
+        didSet{
+            if let bookinformation = bookInfo{
+                labelBookTitle.text = bookinformation.name
+                labelBookAuthor.text = bookinformation.authorName
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupUI()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    fileprivate func setupUI(){
+        //labelBookTypeTitle.textColor = .white
+       // labelBookDescription.textColor = .white
+        viewBackground.layer.cornerRadius = 8
     }
+
     
 }

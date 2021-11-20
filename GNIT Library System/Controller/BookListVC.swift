@@ -19,7 +19,6 @@ class BookListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         tableBookList.dataSource = self
         tableBookList.delegate = self
-        
         tableBookList.register(UINib(nibName: "BookListCell", bundle: nil), forCellReuseIdentifier: "BookListCell")
         fetchBook()
     }
@@ -36,7 +35,8 @@ class BookListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookListCell") as! BookListCell
-        cell.textLabel?.text = bookList[indexPath.row].name
+        cell.selectionStyle = .none
+        cell.bookInfo = bookList[indexPath.row]
         return cell
     }
     
